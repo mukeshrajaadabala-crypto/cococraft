@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | Konaseema CocoCraft</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="checkout-page">
+  <nav class="site-nav">
+    <a class="brand" href="index.html#home">
+      <img src="https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856630/Logo_ypacnp.jpg" alt="Konaseema CocoCraft logo" />
+      <span class="brand-text">
+        <span class="brand-title">Konaseema</span>
+        <span class="brand-sub">CocoCraft</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#products">Shop</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <a class="cart-icon" href="cart.html" aria-label="Shopping cart">
+      🛒
+      <span class="cart-count">0</span>
+    </a>
+  </nav>
+
+  <main class="checkout-main">
+    <div class="checkout-hero">
+      <span class="eyebrow">CHECKOUT</span>
+      <h1>Secure your artisan pieces</h1>
+      <p>Share your delivery details and we will confirm availability before dispatch.</p>
+    </div>
+
+    <section class="checkout-layout">
+      <form class="checkout-form" id="checkout-form" aria-label="Delivery details" novalidate>
+        <label class="field">
+          <span>Full name</span>
+          <input type="text" id="checkout-name" name="fullName" placeholder="Your full name" required />
+        </label>
+
+        <label class="field">
+          <span>Mobile number</span>
+          <input type="tel" id="checkout-phone" name="mobile" placeholder="+91 98765 43210" required />
+        </label>
+
+        <label class="field">
+          <span>Full shipping address</span>
+          <textarea id="checkout-address" name="address" rows="4" placeholder="House / flat, street, city" required></textarea>
+        </label>
+
+        <label class="field">
+          <span>State</span>
+          <input type="text" id="checkout-state" name="state" placeholder="Andhra Pradesh" required />
+        </label>
+
+        <label class="field">
+          <span>Pincode</span>
+          <input type="text" id="checkout-pincode" name="pincode" inputmode="numeric" placeholder="533001" required />
+        </label>
+
+        <div class="whatsapp-note">
+          <span>On placing your order, a pre-filled WhatsApp message will open so you can send your details directly to us. We'll confirm the order and arrange payment on delivery.</span>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Place order &amp; send on WhatsApp</button>
+      </form>
+
+      <aside class="checkout-summary" aria-label="Order summary">
+        <div class="summary-header">Your order</div>
+        <div class="summary-list" id="checkout-summary-list"></div>
+        <div class="summary-totals" id="checkout-summary-totals"></div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="logic.mjs"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart | Konaseema CocoCraft</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="cart-page">
+  <nav class="site-nav">
+    <a class="brand" href="index.html#home">
+      <img src="https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856630/Logo_ypacnp.jpg" alt="Konaseema CocoCraft logo" />
+      <span class="brand-text">
+        <span class="brand-title">Konaseema</span>
+        <span class="brand-sub">CocoCraft</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#products">Shop</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <a class="cart-icon" href="cart.html" aria-label="Shopping cart">
+      🛒
+      <span class="cart-count">0</span>
+    </a>
+  </nav>
+
+  <main class="cart-page-main">
+    <div class="cart-hero">
+      <span class="eyebrow">YOUR CART</span>
+      <h1>Curated artisan pieces ready for checkout</h1>
+      <p>Review your handcrafted selection and adjust quantities before checkout.</p>
+    </div>
+
+    <section class="cart-layout">
+      <div class="cart-items" aria-live="polite"></div>
+      <aside class="cart-summary" aria-label="Checkout summary"></aside>
+    </section>
+  </main>
+
+  <script src="logic.mjs"></script>
+</body>
+
+</html>
