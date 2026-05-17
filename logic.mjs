@@ -87,6 +87,7 @@ if (navToggle && navLinks) {
 }
 
 const CART_KEY = 'kc_cart';
+const ORDER_COUNTER_KEY = 'kc_order_counter';
 const SHIPPING_FEE = 100;
 const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhSPSEFz44FcxDVNsLqgHeKqR6BQyfBJE9lty_dqJc_4sjOPJvhcJ1jYk-_6mp8sSJ3g/exec';
 const cartCount = document.querySelector('.cart-count');
@@ -456,14 +457,13 @@ const renderCheckout = () => {
 renderCheckout();
 
 const generateOrderId = () => {
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-  let result = '';
+  const raw = window.localStorage.getItem(ORDER_COUNTER_KEY);
+  const lastNumber = Number.parseInt(raw, 10);
+  const nextNumber = Number.isFinite(lastNumber) && lastNumber > 0 ? lastNumber + 1 : 1;
 
-  for (let i = 0; i < 8; i += 1) {
-    result += charset.charAt(Math.floor(Math.random() * charset.length));
-  }
+  window.localStorage.setItem(ORDER_COUNTER_KEY, nextNumber.toString());
 
-  return result;
+  return `CCK${String(nextNumber).padStart(5, '0')}`;
 };
 
 const buildWhatsAppMessage = (orderId, customer, items, total) => {
@@ -537,7 +537,6 @@ if (checkoutForm) {
       products: items.map(item => `${item.name} x ${item.qty}`).join(', '),
       quantity: items.reduce((sum, item) => sum + item.qty, 0),
       amount: totalAmount,
-      notes: '',
       date: orderDate
     };
 

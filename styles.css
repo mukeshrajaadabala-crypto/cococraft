@@ -217,6 +217,14 @@ button{
   align-items:center;
 }
 
+.hero-slide .slide-card{
+  order:2;
+}
+
+.hero-slide .hero-media{
+  order:1;
+}
+
 .hero-glass{
   background:#ffffff;
   border:1px solid rgba(30,38,26,0.06);
@@ -459,10 +467,10 @@ button{
 
 .trust-strip{
   background:linear-gradient(90deg, #e6edd6 0%, #eff3e2 50%, #e2ead1 100%);
-  padding:18px var(--content-padding);
+  padding:10px var(--content-padding);
   display:grid;
   grid-template-columns:repeat(5, minmax(0, 1fr));
-  gap:12px;
+  gap:8px;
   border-top:1px solid rgba(30, 38, 26, 0.08);
   border-bottom:1px solid rgba(30, 38, 26, 0.08);
   scroll-margin-top:80px;
@@ -471,13 +479,13 @@ button{
 .trust-item{
   display:flex;
   align-items:center;
-  gap:12px;
-  padding:10px 6px;
+  gap:10px;
+  padding:6px 4px;
 }
 
 .trust-icon{
-  width:40px;
-  height:40px;
+  width:34px;
+  height:34px;
   border-radius:50%;
   display:grid;
   place-items:center;
@@ -487,19 +495,19 @@ button{
 }
 
 .trust-icon svg{
-  width:22px;
-  height:22px;
+  width:18px;
+  height:18px;
 }
 
 .trust-item h4{
-  font-size:13px;
+  font-size:12px;
   font-weight:700;
   letter-spacing:0.3px;
   text-transform:uppercase;
 }
 
 .trust-item p{
-  font-size:12px;
+  font-size:11px;
   color:var(--muted);
 }
 
@@ -542,19 +550,19 @@ button{
 .footer{
   background:#1f2a18;
   color:#ffffff;
-  padding:50px var(--content-padding) 40px;
+  padding:22px var(--content-padding) 18px;
 }
 
 .footer-grid{
   display:grid;
   grid-template-columns:repeat(3, minmax(0, 1fr));
-  gap:24px;
+  gap:16px;
 }
 
 .footer h3{
   font-family:'Cormorant Garamond',serif;
   font-size:22px;
-  margin-bottom:12px;
+  margin-bottom:6px;
 }
 
 .footer p,
@@ -564,10 +572,18 @@ button{
 }
 
 .footer-bottom{
-  margin-top:30px;
+  margin-top:12px;
   font-size:12px;
   color:rgba(255,255,255,0.6);
   text-align:center;
+}
+
+.contact-phone{
+  font-family:'Manrope',sans-serif;
+  font-size:14px;
+  font-weight:500;
+  color:rgba(255,255,255,0.75);
+  margin-left:8px;
 }
 
 /* WHATSAPP */
@@ -603,13 +619,13 @@ button{
   width:52px;
   height:52px;
   border-radius:50%;
-  background:#25d366;
-  color:#ffffff;
+  background:transparent;
+  color:inherit;
   display:flex;
   align-items:center;
   justify-content:center;
   font-size:24px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+  box-shadow:none;
   z-index:1000;
   transition:0.3s;
 }
@@ -619,10 +635,37 @@ button{
 }
 
 .insta-fab img{
-  width:24px;
-  height:24px;
-  border-radius:6px;
+  width:52px;
+  height:52px;
+  border-radius:50%;
   object-fit:cover;
+}
+
+.facebook-fab{
+  position:fixed;
+  bottom:84px;
+  right:20px;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:#1877f2;
+  color:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:none;
+  z-index:1000;
+  transition:0.3s;
+}
+
+.facebook-fab:hover{
+  transform:translateY(-3px);
+}
+
+.facebook-fab svg{
+  width:26px;
+  height:26px;
+  fill:currentColor;
 }
 
 /* CART PAGE */
@@ -923,6 +966,14 @@ button{
 @media(max-width:1100px){
   .hero-slide{
     grid-template-columns:repeat(1, minmax(0, 1fr));
+  }
+
+  .hero-slide .slide-card{
+    order:1;
+  }
+
+  .hero-slide .hero-media{
+    order:2;
   }
 
   .hero-media img{
