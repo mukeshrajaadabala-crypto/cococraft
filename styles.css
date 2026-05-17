@@ -1054,6 +1054,14 @@ button{
     align-items:flex-start;
   }
 
+  .hero-slide .slide-card{
+    order:2;
+  }
+
+  .hero-slide .hero-media{
+    order:1;
+  }
+
   .products-grid,
   .value-strip,
   .trust-strip,
