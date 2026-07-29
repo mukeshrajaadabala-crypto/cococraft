@@ -11,50 +11,50 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 const productData = [
   {
-    id: 'bowl',
-    name: 'Coconut Shell Bowl',
-    price: 299,
-    tag: 'Hand-polished',
+    id: 'WR001',
+    name: 'Wooden Rakhi - Pack of 1 (WR001)',
+    price: 35,
+    tag: 'Eco-Friendly Wooden Rakhi (Pack of 1)',
     image:
-      'https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856533/bowl_f2ra5t.webp',
-    alt: 'Coconut shell bowl'
+      'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785352016/Wooden_Rakhis_pack_of_1_je8b6n.png',
+    alt: 'Wooden Rakhi - Pack of 1 (WR001)'
   },
   {
-    id: 'earrings',
-    name: 'Coconut Shell Earrings',
-    price: 199,
-    tag: 'Lightweight',
+    id: 'WR002',
+    name: 'Wooden Rakhi - Pack of 3 (WR002)',
+    price: 99,
+    tag: 'Eco-Friendly Wooden Rakhi (Pack of 3)',
     image:
-      'https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856589/earrings.avif',
-    alt: 'Coconut shell earrings'
-  },
-  {
-    id: 'rakhi',
-    name: 'Coconut Shell Rakhi',
-    price: 199,
-    tag: 'Eco-friendly',
-    image:
-      'https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856578/coconut_shell_rakhi_bsygwv.jpg',
-    alt: 'Coconut shell rakhi'
-  },
-  {
-    id: 'lamp',
-    name: 'Coconut Shell Lamp',
-    price: 699,
-    tag: 'Ambient glow',
-    image:
-      'https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856618/lamp_tbnou0.webp',
-    alt: 'Coconut shell lamp'
-  },
-  {
-    id: 'cup',
-    name: 'Coconut Shell Cup',
-    price: 249,
-    tag: 'Natural finish',
-    image:
-      'https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856591/cup_cuibyf.jpg',
-    alt: 'Coconut shell cup'
+      'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785351521/Wooden_Rakhis_Combo_jhlbmz.png',
+    alt: 'Wooden Rakhi - Pack of 3 (WR002)'
   }
+  // {
+  //   id: 'WR003',
+  //   name: 'Wooden Rakhi - Set of 3 (WR003)',
+  //   price: 99,
+  //   tag: 'Eco-Friendly Wooden Rakhi Set of 3',
+  //   image:
+  //     'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785351521/Wooden_Rakhis_Combo_jhlbmz.png',
+  //   alt: 'Wooden Rakhi - Set of 3 (WR003)'
+  // },
+  // {
+  //   id: 'WR004',
+  //   name: 'Wooden Rakhi(WR004)',
+  //   price: 35,
+  //   tag: 'Eco-Friendly Wooden Rakhi Pack of 1',
+  //   image:
+  //     'https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856578/coconut_shell_rakhi_bsygwv.jpg',
+  //   alt: 'Wooden Rakhi(WR004)'
+  // },
+  // {
+  //   id: 'WR005',
+  //   name: 'Wooden Rakhi(WR005)',
+  //   price: 35,
+  //   tag: 'Eco-Friendly Wooden Rakhi Pack of 1',
+  //   image:
+  //     'https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856591/cup_cuibyf.jpg',
+  //   alt: 'Wooden Rakhi(WR005)'
+  // }
 ];
 
 if (typeof Swiper !== 'undefined') {
