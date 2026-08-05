@@ -12,21 +12,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const productData = [
   {
     id: 'WR001',
-    name: 'Wooden Rakhi - Pack of 1 (WR001)',
+    name: 'Wooden Rakhi-Packof 1 (WR001)',
     price: 35,
-    tag: 'Eco-Friendly Wooden Rakhi (Pack of 1)',
+    tag: 'Eco-Friendly Wooden Rakhi (Packof 1)',
     image:
       'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785352016/Wooden_Rakhis_pack_of_1_je8b6n.png',
-    alt: 'Wooden Rakhi - Pack of 1 (WR001)'
+    alt: 'Wooden Rakhi-Packof 1 (WR001)'
   },
   {
     id: 'WR002',
-    name: 'Wooden Rakhi - Pack of 3 (WR002)',
+    name: 'Wooden Rakhi-Packof 3 (WR002)',
     price: 99,
-    tag: 'Eco-Friendly Wooden Rakhi (Pack of 3)',
+    tag: 'Eco-Friendly Wooden Rakhi (Packof 3)',
     image:
       'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785351521/Wooden_Rakhis_Combo_jhlbmz.png',
-    alt: 'Wooden Rakhi - Pack of 3 (WR002)'
+    alt: 'Wooden Rakhi-Packof 3 (WR002)'
+  },
+  {
+    id: 'CCS001',
+    name: 'Coconut Shell Rakhi-Packof 1 (CCS001)',
+    price: 59,
+    tag: 'Eco-Friendly Coconut Shell Rakhi (Packof 1)',
+    image:
+      'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785931822/CCS001_biiqcs.jpg',
+    alt: 'Eco-Friendly Coconut Shell Rakhi Packof 1 (CCS001)'
+  },
+  {
+    id: 'CCS002',
+    name: 'Coconut Shell Rakhi-Packof 1 (CCS002)',
+    price: 59,
+    tag: 'Eco-Friendly Coconut Shell Rakhi (Packof 1)',
+    image:
+      'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785931837/CCS002_pytuoa.jpg',
+    alt: 'Eco-Friendly Coconut Shell Rakhi Packof 1 (CCS002)'
   }
   // {
   //   id: 'WR003',
