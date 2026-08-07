@@ -81,6 +81,13 @@
       <aside class="checkout-summary" aria-label="Order summary">
         <div class="summary-header">Your order</div>
         <div class="summary-list" id="checkout-summary-list"></div>
+        <div class="coupon-container">
+          <div class="coupon-field">
+            <input type="text" id="coupon-input" placeholder="Enter coupon code" aria-label="Coupon code" />
+            <button type="button" id="apply-coupon-btn" class="btn btn-ghost">Apply</button>
+          </div>
+          <p id="coupon-message" class="coupon-message" aria-live="polite"></p>
+        </div>
         <div class="summary-totals" id="checkout-summary-totals"></div>
       </aside>
     </section>

@@ -13,66 +13,113 @@ const productData = [
   {
     id: 'WR001',
     name: 'Wooden Rakhi-Packof 1 (WR001)',
-    price: 35,
+    mrp: 99,
+    price: 80,
+    category: 'Rakhis',
+    subcategory: 'Wooden rakhis',
     tag: 'Eco-Friendly Wooden Rakhi (Packof 1)',
     image:
       'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785352016/Wooden_Rakhis_pack_of_1_je8b6n.png',
-    alt: 'Wooden Rakhi-Packof 1 (WR001)'
+    alt: 'Wooden Rakhi-Packof 1 (WR001)',
+    description: 'This single-piece eco-friendly Wooden Rakhi is crafted with high-precision laser carving from natural wood. It features traditional geometric and floral designs, dyed with organic non-toxic colors, and bound with a soft cotton thread. Perfectly biodegradable and skin-safe.'
   },
   {
     id: 'WR002',
     name: 'Wooden Rakhi-Packof 3 (WR002)',
-    price: 99,
+    mrp: 297,
+    price: 198,
+    category: 'Rakhis',
+    subcategory: 'Wooden rakhis',
     tag: 'Eco-Friendly Wooden Rakhi (Packof 3)',
     image:
       'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785351521/Wooden_Rakhis_Combo_jhlbmz.png',
-    alt: 'Wooden Rakhi-Packof 3 (WR002)'
+    alt: 'Wooden Rakhi-Packof 3 (WR002)',
+    description: 'A beautiful combo set of three unique eco-friendly wooden rakhis. Each piece showcases distinct traditional patterns, meticulously engraved on natural wood. Ideal for families celebrating sustainable bonds.'
   },
   {
     id: 'CCS001',
     name: 'Coconut Shell Rakhi-Packof 1 (CCS001)',
-    price: 59,
+    mrp: 149,
+    price: 99,
+    category: 'Rakhis',
+    subcategory: 'Coconut shell rakhis',
     tag: 'Eco-Friendly Coconut Shell Rakhi (Packof 1)',
     image:
       'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785931822/CCS001_biiqcs.jpg',
-    alt: 'Eco-Friendly Coconut Shell Rakhi Packof 1 (CCS001)'
+    alt: 'Eco-Friendly Coconut Shell Rakhi Packof 1 (CCS001)',
+    description: 'Transformed from a real discarded coconut shell, this handmade eco-friendly rakhi features a polished round shell emblem with hand-carved floral detailing. A perfect combination of traditional art and sustainable design.'
   },
   {
     id: 'CCS002',
     name: 'Coconut Shell Rakhi-Packof 1 (CCS002)',
-    price: 59,
+    mrp: 149,
+    price: 99,
+    category: 'Rakhis',
+    subcategory: 'Coconut shell rakhis',
     tag: 'Eco-Friendly Coconut Shell Rakhi (Packof 1)',
     image:
       'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785931837/CCS002_pytuoa.jpg',
-    alt: 'Eco-Friendly Coconut Shell Rakhi Packof 1 (CCS002)'
+    alt: 'Eco-Friendly Coconut Shell Rakhi Packof 1 (CCS002)',
+    description: 'Features a unique hand-carved pattern on natural coconut shell. Lightweight, durable, and completely biodegradable, this rakhi is a beautiful testament to Konaseema\'s local craftsmanship.'
+  },
+  {
+    id: 'RK001',
+    name: 'Handmade Eco-Friendly Thread Rakhi (RK001)',
+    mrp: 49,
+    price: 29,
+    category: 'Rakhis',
+    subcategory: 'Rakhis',
+    tag: 'Traditional Eco-Friendly Thread Rakhi',
+    image:
+      'https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856649/rakhi_fg6o9h.jpg',
+    alt: 'Handmade Eco-Friendly Thread Rakhi (RK001)',
+    description: 'A traditional handcrafted rakhi made of 100% organic cotton threads and decorated with natural wooden beads. Simple, elegant, skin-friendly, and completely sustainable.'
+  },
+  {
+    id: 'KC001',
+    name: 'Govinda Blessings Keychain (KC001)',
+    mrp: 120,
+    price: 65,
+    category: 'KeyChains',
+    subcategory: '',
+    tag: 'Handcrafted Keychain',
+    image: 'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106455/KC001_mboqsm.jpg',
+    images: [
+      'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106455/KC001_mboqsm.jpg',
+      'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106461/KC001.1_bsqzxp.jpg'
+    ],
+    alt: 'Govinda Blessings Keychain (KC001)',
+    description: 'A premium handcrafted keychain made from natural, polished coconut shells featuring the sacred Govinda blessings engraving. Sturdy, lightweight, and showcasing rustic beauty. Features a durable steel key ring.'
+  },
+  // {
+  //   id: 'ER001',
+  //   name: 'Coconut Shell Handpainted Earrings (ER001)',
+  //   mrp: 199,
+  //   price: 120,
+  //   category: 'EarRings',
+  //   subcategory: '',
+  //   tag: 'Traditional Handpainted Earrings',
+  //   image: 'earrings_mockup.png',
+  //   alt: 'Coconut Shell Handpainted Earrings (ER001)',
+  //   description: 'Delicate and lightweight drop earrings, hand-cut from coconut shells and painted with vibrant traditional Indian art. Features allergy-safe hypoallergenic metal hooks.'
+  // },
+  {
+    id: 'CCS007',
+    name: 'Coconut Shell Rakhi-Packof 1 (CCS007)',
+    mrp: 199,
+    price: 99,
+    category: 'Rakhis',
+    subcategory: 'Coconut shell rakhis',
+    tag: 'Eco-Friendly Hand-Carved Coconut Shell Rakhi',
+    image: 'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106432/CCS007_yugwvc.jpg',
+    images: [
+      'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106432/CCS007_yugwvc.jpg',
+      'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106440/CCS007.1_ize7u7.jpg',
+      'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106446/CCS7.2_f4nk1s.jpg'
+    ],
+    alt: 'Coconut Shell Rakhi-Packof 1 (CCS007)',
+    description: 'A premium hand-crafted coconut shell rakhi featuring fine geometric shapes and detailed concentric circle carving. Sustainable, skin-safe, biodegradable, and bound with high-quality organic threads.'
   }
-  // {
-  //   id: 'WR003',
-  //   name: 'Wooden Rakhi - Set of 3 (WR003)',
-  //   price: 99,
-  //   tag: 'Eco-Friendly Wooden Rakhi Set of 3',
-  //   image:
-  //     'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785351521/Wooden_Rakhis_Combo_jhlbmz.png',
-  //   alt: 'Wooden Rakhi - Set of 3 (WR003)'
-  // },
-  // {
-  //   id: 'WR004',
-  //   name: 'Wooden Rakhi(WR004)',
-  //   price: 35,
-  //   tag: 'Eco-Friendly Wooden Rakhi Pack of 1',
-  //   image:
-  //     'https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856578/coconut_shell_rakhi_bsygwv.jpg',
-  //   alt: 'Wooden Rakhi(WR004)'
-  // },
-  // {
-  //   id: 'WR005',
-  //   name: 'Wooden Rakhi(WR005)',
-  //   price: 35,
-  //   tag: 'Eco-Friendly Wooden Rakhi Pack of 1',
-  //   image:
-  //     'https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856591/cup_cuibyf.jpg',
-  //   alt: 'Wooden Rakhi(WR005)'
-  // }
 ];
 
 if (typeof Swiper !== 'undefined') {
@@ -166,6 +213,9 @@ const addToCart = productId => {
   updateCartCount(cart);
 };
 
+let activeCategory = 'all';
+let activeSubcategory = 'all';
+
 const renderProducts = () => {
   if (!productsGrid) {
     return;
@@ -174,22 +224,55 @@ const renderProducts = () => {
   const cart = loadCart();
   const cartIds = new Set(cart.map(item => item.id));
 
-  productsGrid.innerHTML = productData
+  const filteredProducts = productData.filter(product => {
+    if (activeCategory !== 'all') {
+      if (product.category !== activeCategory) {
+        return false;
+      }
+      if (activeCategory === 'Rakhis' && activeSubcategory !== 'all') {
+        if (product.subcategory !== activeSubcategory) {
+          return false;
+        }
+      }
+    }
+    return true;
+  });
+
+  if (filteredProducts.length === 0) {
+    let categoryLabel = activeCategory;
+    if (categoryLabel === 'KeyChains') categoryLabel = 'Keychains';
+    if (categoryLabel === 'EarRings') categoryLabel = 'Earrings';
+
+    productsGrid.innerHTML = `
+      <div class="coming-soon-card">
+        <h3>Crafting in Progress...</h3>
+        <p>We are hand-carving new, eco-friendly ${categoryLabel.toLowerCase()} from natural coconut shells. Stay tuned for our next launch!</p>
+      </div>
+    `;
+    return;
+  }
+
+  productsGrid.innerHTML = filteredProducts
     .map(product => {
       const inCart = cartIds.has(product.id);
       const buttonLabel = inCart ? 'Go to Cart' : 'Add to Cart';
       const buttonClass = `product-btn${inCart ? ' is-in-cart' : ''}`;
+      const discount = Math.round(((product.mrp - product.price) / product.mrp) * 100);
 
       return `
         <article class="product-card" data-product-id="${product.id}">
           <div class="product-image">
+            <span class="discount-badge">${discount}% OFF</span>
             <img src="${product.image}" alt="${product.alt}" loading="lazy" decoding="async" />
           </div>
           <div class="product-body">
             <h3>${product.name}</h3>
             <div class="product-meta">
               <span>${product.tag}</span>
-              <span class="product-price">₹${product.price}</span>
+              <div class="product-pricing">
+                <span class="product-mrp">₹${product.mrp}</span>
+                <span class="product-price">₹${product.price}</span>
+              </div>
             </div>
             <button class="${buttonClass}" type="button" data-in-cart="${inCart}">${buttonLabel}</button>
           </div>
@@ -199,12 +282,178 @@ const renderProducts = () => {
     .join('');
 };
 
-renderProducts();
+const setupCategoryFilters = () => {
+  const categoryTabsContainer = document.querySelector('.category-tabs');
+  const subcategoryTabsContainer = document.querySelector('.subcategory-tabs');
 
+  if (!categoryTabsContainer) {
+    return;
+  }
+
+  categoryTabsContainer.addEventListener('click', event => {
+    const tab = event.target.closest('.category-tab');
+    if (!tab) return;
+
+    categoryTabsContainer.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    activeCategory = tab.getAttribute('data-category');
+    activeSubcategory = 'all';
+
+    if (subcategoryTabsContainer) {
+      subcategoryTabsContainer.querySelectorAll('.subcategory-tab').forEach(t => t.classList.remove('active'));
+      const allSubTab = subcategoryTabsContainer.querySelector('[data-subcategory="all"]');
+      if (allSubTab) allSubTab.classList.add('active');
+
+      if (activeCategory === 'Rakhis') {
+        subcategoryTabsContainer.style.display = 'flex';
+      } else {
+        subcategoryTabsContainer.style.display = 'none';
+      }
+    }
+
+    renderProducts();
+  });
+
+  if (subcategoryTabsContainer) {
+    subcategoryTabsContainer.addEventListener('click', event => {
+      const tab = event.target.closest('.subcategory-tab');
+      if (!tab) return;
+
+      subcategoryTabsContainer.querySelectorAll('.subcategory-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      activeSubcategory = tab.getAttribute('data-subcategory');
+      renderProducts();
+    });
+  }
+};
+
+const openProductModal = productId => {
+  const product = productData.find(p => p.id === productId);
+  if (!product) return;
+
+  const modalRoot = document.querySelector('#product-modal-root');
+  if (!modalRoot) return;
+
+  const cart = loadCart();
+  const inCart = cart.some(item => item.id === productId);
+  const buttonLabel = inCart ? 'Go to Cart' : 'Add to Cart';
+  const buttonClass = `product-btn${inCart ? ' is-in-cart' : ''}`;
+  const discount = Math.round(((product.mrp - product.price) / product.mrp) * 100);
+
+  let imageWrapperContent = `<img src="${product.image}" alt="${product.alt}" />`;
+  if (product.images && product.images.length > 0) {
+    imageWrapperContent = `
+      <div class="swiper modal-swiper">
+        <div class="swiper-wrapper">
+          ${product.images.map(img => `
+            <div class="swiper-slide">
+              <img src="${img}" alt="${product.alt}" />
+            </div>
+          `).join('')}
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    `;
+  }
+
+  modalRoot.innerHTML = `
+    <div class="product-modal" id="product-details-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="product-modal-content">
+        <button class="modal-close" type="button" aria-label="Close details">✕</button>
+        <div class="modal-image-wrapper">
+          ${imageWrapperContent}
+        </div>
+        <div class="modal-info">
+          <span class="modal-tag">${product.tag}</span>
+          <h2 id="modal-title">${product.name}</h2>
+          <div class="modal-pricing">
+            <span class="modal-mrp">₹${product.mrp}</span>
+            <span class="modal-price">₹${product.price}</span>
+            <span class="modal-discount">${discount}% OFF</span>
+          </div>
+          <p class="modal-description">${product.description || ''}</p>
+          <div class="modal-action">
+            <button class="btn btn-primary ${buttonClass}" type="button" data-product-id="${product.id}" data-in-cart="${inCart}">${buttonLabel}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  const modal = modalRoot.querySelector('#product-details-modal');
+  setTimeout(() => {
+    modal.classList.add('is-open');
+    if (product.images && product.images.length > 0 && typeof Swiper !== 'undefined') {
+      new Swiper('.modal-swiper', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      });
+    }
+  }, 10);
+
+  const closeBtn = modal.querySelector('.modal-close');
+  const closeModal = () => {
+    modal.classList.remove('is-open');
+    setTimeout(() => {
+      modalRoot.innerHTML = '';
+    }, 300);
+  };
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  const actionBtn = modal.querySelector('.modal-action .product-btn');
+  actionBtn.addEventListener('click', () => {
+    if (actionBtn.getAttribute('data-in-cart') === 'true') {
+      window.location.href = 'cart.html';
+      return;
+    }
+
+    addToCart(productId);
+    actionBtn.setAttribute('data-in-cart', 'true');
+    actionBtn.textContent = 'Go to Cart';
+    actionBtn.classList.add('is-in-cart');
+
+    const gridBtn = document.querySelector(`.product-card[data-product-id="${productId}"] .product-btn`);
+    if (gridBtn) {
+      gridBtn.setAttribute('data-in-cart', 'true');
+      gridBtn.textContent = 'Go to Cart';
+      gridBtn.classList.add('is-in-cart');
+    }
+  });
+};
+
+renderProducts();
 updateCartCount(loadCart());
+setupCategoryFilters();
 
 if (productsGrid) {
   productsGrid.addEventListener('click', event => {
+    const imageEl = event.target.closest('.product-image');
+    if (imageEl) {
+      const card = imageEl.closest('.product-card');
+      if (card) {
+        const productId = card.getAttribute('data-product-id');
+        openProductModal(productId);
+      }
+      return;
+    }
+
     const button = event.target.closest('.product-btn');
 
     if (!button) {
@@ -301,7 +550,10 @@ const renderCart = () => {
           </div>
           <div class="cart-item-info">
             <h4>${item.name}</h4>
-            <span class="cart-item-price">${formatCurrency(item.price)}</span>
+            <div class="cart-item-pricing">
+              <span class="cart-item-mrp">${formatCurrency(item.mrp)}</span>
+              <span class="cart-item-price">${formatCurrency(item.price)}</span>
+            </div>
             <div class="cart-qty">
               <button class="qty-btn" type="button" data-action="decrease" aria-label="Decrease quantity">-</button>
               <span class="qty-value">${item.qty}</span>
@@ -396,6 +648,14 @@ if (cartItemsRoot) {
 
 renderCart();
 
+const VALID_COUPONS = {
+  'RAVALI5': { minSubtotal: 500, discount: 0.05 },
+  'RAVALI10': { minSubtotal: 1200, discount: 0.10 }
+};
+
+let appliedCouponCode = '';
+let discountPercent = 0;
+
 const renderCheckout = () => {
   if (!checkoutSummaryList || !checkoutSummaryTotals) {
     return;
@@ -437,7 +697,7 @@ const renderCheckout = () => {
           <img src="${item.image}" alt="${item.alt}" loading="lazy" decoding="async" />
           <div>
             <p>${item.name}</p>
-            <span>Qty ${item.qty} · ${formatCurrency(item.price)}</span>
+            <span>Qty ${item.qty} · <span class="summary-item-mrp">${formatCurrency(item.mrp)}</span> ${formatCurrency(item.price)}</span>
           </div>
           <strong>${formatCurrency(item.subtotal)}</strong>
         </div>
@@ -454,25 +714,121 @@ const renderCheckout = () => {
     { items: 0, price: 0 }
   );
 
-  checkoutSummaryTotals.innerHTML = `
+  const subtotal = totals.price;
+
+  if (appliedCouponCode && VALID_COUPONS[appliedCouponCode]) {
+    const coupon = VALID_COUPONS[appliedCouponCode];
+    if (subtotal > coupon.minSubtotal) {
+      discountPercent = coupon.discount;
+    } else {
+      appliedCouponCode = '';
+      discountPercent = 0;
+      const couponInput = document.querySelector('#coupon-input');
+      const couponMessage = document.querySelector('#coupon-message');
+      if (couponInput) couponInput.value = '';
+      if (couponMessage) {
+        couponMessage.textContent = `This coupon is only applicable for orders above ${formatCurrency(coupon.minSubtotal)}.`;
+        couponMessage.className = 'coupon-message error';
+      }
+    }
+  }
+
+  const discountAmount = Math.round(subtotal * discountPercent);
+  const totalAmount = subtotal - discountAmount + SHIPPING_FEE;
+
+  let totalsHtml = `
     <div>
       <span>Subtotal</span>
-      <span>${formatCurrency(totals.price)}</span>
+      <span>${formatCurrency(subtotal)}</span>
     </div>
+  `;
+
+  if (discountAmount > 0) {
+    totalsHtml += `
+      <div class="discount-row">
+        <span>Discount (${Math.round(discountPercent * 100)}%)</span>
+        <span style="color: #1f6b3b;">-${formatCurrency(discountAmount)}</span>
+      </div>
+    `;
+  }
+
+  totalsHtml += `
     <div>
       <span>Shipping</span>
       <span>${formatCurrency(SHIPPING_FEE)}</span>
     </div>
     <div class="summary-grand">
       <span>Total</span>
-      <strong>${formatCurrency(totals.price + SHIPPING_FEE)}</strong>
+      <strong>${formatCurrency(totalAmount)}</strong>
     </div>
   `;
 
+  checkoutSummaryTotals.innerHTML = totalsHtml;
   updateCartCount(cart);
 };
 
+const handleApplyCoupon = () => {
+  const couponInput = document.querySelector('#coupon-input');
+  const couponMessage = document.querySelector('#coupon-message');
+
+  if (!couponInput || !couponMessage) return;
+
+  const code = couponInput.value.trim().toUpperCase();
+
+  if (code === '') {
+    couponMessage.textContent = 'Please enter a coupon code.';
+    couponMessage.className = 'coupon-message error';
+    return;
+  }
+
+  if (VALID_COUPONS[code]) {
+    const coupon = VALID_COUPONS[code];
+    const cart = loadCart();
+    const items = buildCartItems(cart);
+    const subtotal = items.reduce((sum, item) => sum + item.subtotal, 0);
+
+    if (subtotal > coupon.minSubtotal) {
+      appliedCouponCode = code;
+      discountPercent = coupon.discount;
+      couponMessage.textContent = 'Coupon applied successfully!';
+      couponMessage.className = 'coupon-message success';
+      renderCheckout();
+    } else {
+      appliedCouponCode = '';
+      discountPercent = 0;
+      couponMessage.textContent = `This coupon is only applicable for orders above ${formatCurrency(coupon.minSubtotal)}.`;
+      couponMessage.className = 'coupon-message error';
+      renderCheckout();
+    }
+  } else {
+    appliedCouponCode = '';
+    discountPercent = 0;
+    couponMessage.textContent = 'Invalid coupon code.';
+    couponMessage.className = 'coupon-message error';
+    renderCheckout();
+  }
+};
+
+const setupCouponListeners = () => {
+  const applyCouponBtn = document.querySelector('#apply-coupon-btn');
+  const couponInput = document.querySelector('#coupon-input');
+
+  if (applyCouponBtn) {
+    applyCouponBtn.addEventListener('click', handleApplyCoupon);
+  }
+
+  if (couponInput) {
+    couponInput.addEventListener('keydown', event => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        handleApplyCoupon();
+      }
+    });
+  }
+};
+
 renderCheckout();
+setupCouponListeners();
 
 const generateOrderId = () => {
   const raw = window.localStorage.getItem(ORDER_COUNTER_KEY);
@@ -484,7 +840,7 @@ const generateOrderId = () => {
   return `CCK${String(nextNumber).padStart(5, '0')}`;
 };
 
-const buildWhatsAppMessage = (orderId, customer, items, total) => {
+const buildWhatsAppMessage = (orderId, customer, items, total, discountAmount = 0) => {
   const lines = [];
 
   lines.push(`*New order #${orderId}*`);
@@ -503,6 +859,10 @@ const buildWhatsAppMessage = (orderId, customer, items, total) => {
   });
 
   lines.push('');
+  if (discountAmount > 0) {
+    const pct = discountPercent > 0 ? Math.round(discountPercent * 100) : 5;
+    lines.push(`*Discount (${pct}%):* -${formatCurrency(discountAmount)}`);
+  }
   lines.push(`*Shipping:* ${formatCurrency(SHIPPING_FEE)}`);
   lines.push(`*Total: ${formatCurrency(total)}*`);
 
@@ -543,7 +903,16 @@ if (checkoutForm) {
 
     const submitButton = checkoutForm.querySelector('button[type="submit"]');
     const orderId = generateOrderId();
-    const totalAmount = totals.price + SHIPPING_FEE;
+
+    const subtotal = totals.price;
+    let discountAmount = 0;
+    if (appliedCouponCode && VALID_COUPONS[appliedCouponCode]) {
+      const coupon = VALID_COUPONS[appliedCouponCode];
+      if (subtotal > coupon.minSubtotal) {
+        discountAmount = Math.round(subtotal * coupon.discount);
+      }
+    }
+    const totalAmount = subtotal - discountAmount + SHIPPING_FEE;
     const orderDate = new Date().toISOString();
 
     const orderPayload = {
@@ -578,7 +947,7 @@ if (checkoutForm) {
       saveCart([]);
       updateCartCount([]);
 
-      const message = buildWhatsAppMessage(orderId, customer, items, totalAmount);
+      const message = buildWhatsAppMessage(orderId, customer, items, totalAmount, discountAmount);
       const encodedMessage = encodeURIComponent(message);
 
       window.location.href = `https://wa.me/9542288472?text=${encodedMessage}`;
@@ -592,3 +961,4 @@ if (checkoutForm) {
     }
   });
 }
+
