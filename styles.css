@@ -1569,3 +1569,200 @@ button {
 .modal-swiper .swiper-pagination-bullet-active {
   background: var(--forest);
 }
+
+/* RAKHI BANNER SECTION */
+.rakhi-banner-section {
+  padding: 24px var(--content-padding);
+  background: transparent;
+}
+
+.rakhi-banner-card {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 32px;
+  background: linear-gradient(135deg, #efe6d9 0%, #fcfbf9 100%);
+  border: 1px solid rgba(45, 62, 47, 0.1);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(26, 35, 19, 0.08);
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rakhi-banner-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(26, 35, 19, 0.12);
+}
+
+.rakhi-banner-image {
+  height: 100%;
+  min-height: 280px;
+  max-height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rakhi-banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.rakhi-banner-card:hover .rakhi-banner-image img {
+  transform: scale(1.03);
+}
+
+.rakhi-banner-text {
+  padding: 32px 40px 32px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.rakhi-banner-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--olive);
+  text-transform: uppercase;
+}
+
+.rakhi-banner-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.rakhi-banner-text p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.rakhi-banner-offers {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 4px 0 8px;
+}
+
+.rakhi-offer-badge {
+  background: rgba(74, 95, 57, 0.08);
+  border: 1px dashed var(--olive);
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.rakhi-banner-actions .btn-primary {
+  box-shadow: 0 8px 20px rgba(45, 62, 47, 0.25);
+}
+
+/* RESPONSIVE RAKHI BANNER */
+@media(max-width: 900px) {
+  .rakhi-banner-card {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .rakhi-banner-image {
+    min-height: 200px;
+    max-height: 240px;
+  }
+
+  .rakhi-banner-text {
+    padding: 24px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rakhi-banner-offers {
+    justify-content: center;
+  }
+}
+
+@media(max-width: 500px) {
+  .rakhi-banner-section {
+    padding: 12px 16px;
+  }
+
+  .rakhi-banner-card {
+    border-radius: 16px;
+  }
+
+  .rakhi-banner-image {
+    min-height: 150px;
+    max-height: 180px;
+  }
+
+  .rakhi-banner-text {
+    padding: 16px 12px;
+    gap: 8px;
+  }
+
+  .rakhi-banner-text h2 {
+    font-size: 24px;
+  }
+
+  .rakhi-banner-text p {
+    font-size: 13px;
+  }
+}
+
+/* INSTAGRAM PROMO CARD */
+.instagram-promo-card {
+  background: linear-gradient(135deg, #fbfaf8 0%, #f3efe7 100%);
+  border: 1px solid rgba(74, 95, 57, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(32, 42, 22, 0.06);
+}
+
+.instagram-promo-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: var(--forest);
+  margin-bottom: 8px;
+}
+
+.instagram-promo-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.instagram-promo-btn {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(45, 62, 47, 0.15);
+}
+
+.instagram-promo-badge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(74, 95, 57, 0.06);
+  border: 1px dashed var(--olive);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--forest);
+}
+
+.instagram-promo-badge strong {
+  color: var(--forest);
+}

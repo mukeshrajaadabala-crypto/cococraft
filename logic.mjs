@@ -63,26 +63,13 @@ const productData = [
     description: 'Features a unique hand-carved pattern on natural coconut shell. Lightweight, durable, and completely biodegradable, this rakhi is a beautiful testament to Konaseema\'s local craftsmanship.'
   },
   {
-    id: 'RK001',
-    name: 'Handmade Eco-Friendly Thread Rakhi (RK001)',
-    mrp: 49,
-    price: 29,
-    category: 'Rakhis',
-    subcategory: 'Rakhis',
-    tag: 'Traditional Eco-Friendly Thread Rakhi',
-    image:
-      'https://res.cloudinary.com/dd1d5fhl4/image/upload/q_auto/f_auto/v1778856649/rakhi_fg6o9h.jpg',
-    alt: 'Handmade Eco-Friendly Thread Rakhi (RK001)',
-    description: 'A traditional handcrafted rakhi made of 100% organic cotton threads and decorated with natural wooden beads. Simple, elegant, skin-friendly, and completely sustainable.'
-  },
-  {
     id: 'KC001',
-    name: 'Govinda Blessings Keychain (KC001)',
+    name: 'Govinda Blessings Keychain-Packof 1 (KC001)',
     mrp: 120,
     price: 65,
     category: 'KeyChains',
     subcategory: '',
-    tag: 'Handcrafted Keychain',
+    tag: 'Handcrafted Keychain (Packof 1)',
     image: 'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106455/KC001_mboqsm.jpg',
     images: [
       'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106455/KC001_mboqsm.jpg',
@@ -224,19 +211,21 @@ const renderProducts = () => {
   const cart = loadCart();
   const cartIds = new Set(cart.map(item => item.id));
 
-  const filteredProducts = productData.filter(product => {
-    if (activeCategory !== 'all') {
-      if (product.category !== activeCategory) {
-        return false;
-      }
-      if (activeCategory === 'Rakhis' && activeSubcategory !== 'all') {
-        if (product.subcategory !== activeSubcategory) {
+  const filteredProducts = productData
+    .filter(product => {
+      if (activeCategory !== 'all') {
+        if (product.category !== activeCategory) {
           return false;
         }
+        if (activeCategory === 'Rakhis' && activeSubcategory !== 'all') {
+          if (product.subcategory !== activeSubcategory) {
+            return false;
+          }
+        }
       }
-    }
-    return true;
-  });
+      return true;
+    })
+    .sort((a, b) => b.price - a.price);
 
   if (filteredProducts.length === 0) {
     let categoryLabel = activeCategory;
@@ -441,6 +430,20 @@ const openProductModal = productId => {
 renderProducts();
 updateCartCount(loadCart());
 setupCategoryFilters();
+
+const filterRakhisBtn = document.querySelector('.filter-rakhis-btn');
+if (filterRakhisBtn) {
+  filterRakhisBtn.addEventListener('click', () => {
+    const rakhisTab = document.querySelector('.category-tab[data-category="Rakhis"]');
+    if (rakhisTab) {
+      rakhisTab.click();
+    }
+    const productsSec = document.querySelector('#products');
+    if (productsSec) {
+      productsSec.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}
 
 if (productsGrid) {
   productsGrid.addEventListener('click', event => {
@@ -649,8 +652,9 @@ if (cartItemsRoot) {
 renderCart();
 
 const VALID_COUPONS = {
-  'RAVALI5': { minSubtotal: 500, discount: 0.05 },
-  'RAVALI10': { minSubtotal: 1200, discount: 0.10 }
+  'RUDRANI5': { minSubtotal: 500, discount: 0.05, maxDiscount: Infinity },
+  'RUDRANI10': { minSubtotal: 1200, discount: 0.10, maxDiscount: Infinity },
+  'COCO10': { minSubtotal: 0, discount: 0.10, maxDiscount: 150 }
 };
 
 let appliedCouponCode = '';
@@ -716,10 +720,15 @@ const renderCheckout = () => {
 
   const subtotal = totals.price;
 
+  let discountAmount = 0;
   if (appliedCouponCode && VALID_COUPONS[appliedCouponCode]) {
     const coupon = VALID_COUPONS[appliedCouponCode];
     if (subtotal > coupon.minSubtotal) {
       discountPercent = coupon.discount;
+      discountAmount = Math.round(subtotal * discountPercent);
+      if (coupon.maxDiscount !== undefined && discountAmount > coupon.maxDiscount) {
+        discountAmount = coupon.maxDiscount;
+      }
     } else {
       appliedCouponCode = '';
       discountPercent = 0;
@@ -733,7 +742,6 @@ const renderCheckout = () => {
     }
   }
 
-  const discountAmount = Math.round(subtotal * discountPercent);
   const totalAmount = subtotal - discountAmount + SHIPPING_FEE;
 
   let totalsHtml = `
@@ -790,7 +798,11 @@ const handleApplyCoupon = () => {
     if (subtotal > coupon.minSubtotal) {
       appliedCouponCode = code;
       discountPercent = coupon.discount;
-      couponMessage.textContent = 'Coupon applied successfully!';
+      let couponDiscountAmount = Math.round(subtotal * discountPercent);
+      if (coupon.maxDiscount !== undefined && couponDiscountAmount > coupon.maxDiscount) {
+        couponDiscountAmount = coupon.maxDiscount;
+      }
+      couponMessage.innerHTML = `✓ Coupon <strong>${code}</strong> applied<br/>${Math.round(discountPercent * 100)}% discount<br/>Discount: ${formatCurrency(couponDiscountAmount)}`;
       couponMessage.className = 'coupon-message success';
       renderCheckout();
     } else {
@@ -803,7 +815,7 @@ const handleApplyCoupon = () => {
   } else {
     appliedCouponCode = '';
     discountPercent = 0;
-    couponMessage.textContent = 'Invalid coupon code.';
+    couponMessage.textContent = 'Invalid or unavailable coupon code.';
     couponMessage.className = 'coupon-message error';
     renderCheckout();
   }
@@ -910,6 +922,9 @@ if (checkoutForm) {
       const coupon = VALID_COUPONS[appliedCouponCode];
       if (subtotal > coupon.minSubtotal) {
         discountAmount = Math.round(subtotal * coupon.discount);
+        if (coupon.maxDiscount !== undefined && discountAmount > coupon.maxDiscount) {
+          discountAmount = coupon.maxDiscount;
+        }
       }
     }
     const totalAmount = subtotal - discountAmount + SHIPPING_FEE;
