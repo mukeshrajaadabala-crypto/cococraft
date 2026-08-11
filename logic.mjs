@@ -652,9 +652,10 @@ if (cartItemsRoot) {
 renderCart();
 
 const VALID_COUPONS = {
-  'RUDRANI5': { minSubtotal: 500, discount: 0.05, maxDiscount: Infinity },
-  'RUDRANI10': { minSubtotal: 1200, discount: 0.10, maxDiscount: Infinity },
-  'COCO10': { minSubtotal: 0, discount: 0.10, maxDiscount: 150 }
+  'RUDRANI5': { minSubtotal: 200, discount: 0.05, maxDiscount: Infinity },
+  'RUDRANI10': { minSubtotal: 1000, discount: 0.10, maxDiscount: Infinity },
+  // 'COCO10': { minSubtotal: 100, discount: 0.10, maxDiscount: 150 },
+  'RAKHI5': { minSubtotal: 100, discount: 0.05, maxDiscount: 150 }
 };
 
 let appliedCouponCode = '';
