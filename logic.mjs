@@ -91,21 +91,21 @@ const productData = [
   //   description: 'Delicate and lightweight drop earrings, hand-cut from coconut shells and painted with vibrant traditional Indian art. Features allergy-safe hypoallergenic metal hooks.'
   // },
   {
-    id: 'CCS007',
-    name: 'Coconut Shell Rakhi-Packof 1 (CCS007)',
+    id: 'WR003',
+    name: 'Wooden Rakhi-Packof 1 (WR003)',
     mrp: 199,
     price: 99,
     category: 'Rakhis',
-    subcategory: 'Coconut shell rakhis',
-    tag: 'Eco-Friendly Hand-Carved Coconut Shell Rakhi',
+    subcategory: 'Wooden rakhis',
+    tag: 'Eco-Friendly Hand-Carved Wooden Rakhi',
     image: 'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106432/CCS007_yugwvc.jpg',
     images: [
       'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106432/CCS007_yugwvc.jpg',
       'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106440/CCS007.1_ize7u7.jpg',
       'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106446/CCS7.2_f4nk1s.jpg'
     ],
-    alt: 'Coconut Shell Rakhi-Packof 1 (CCS007)',
-    description: 'A premium hand-crafted coconut shell rakhi featuring fine geometric shapes and detailed concentric circle carving. Sustainable, skin-safe, biodegradable, and bound with high-quality organic threads.'
+    alt: 'Wooden Rakhi-Packof 1 (WR003)',
+    description: 'A premium hand-crafted Wooden rakhi featuring fine geometric shapes and detailed concentric circle carving. Sustainable, skin-safe, biodegradable, and bound with high-quality organic threads.'
   }
 ];
 
