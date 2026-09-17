@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Checkout | Konaseema CocoCraft</title>
+  <meta name="description" content="Complete your delivery details to confirm your order on Konaseema CocoCraft." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +29,10 @@
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
 
     <ul class="nav-links">
-      <li><a href="index.html#products">Shop</a></li>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
     </ul>
 
     <a class="cart-icon" href="cart.html" aria-label="Shopping cart">
@@ -37,71 +41,95 @@
     </a>
   </nav>
 
-  <main class="checkout-main">
+  <main class="checkout-main" id="checkout-main-content">
     <div class="checkout-hero">
       <span class="eyebrow">CHECKOUT</span>
       <h1>Secure your artisan pieces</h1>
-      <p>Share your delivery details and we will confirm availability before dispatch.</p>
+      <p>Enter your delivery information. We will save your order, generate a unique Order ID, and prepare your items for dispatch.</p>
     </div>
 
-    <section class="checkout-layout">
+    <!-- Error Banner for Submission Failures -->
+    <div id="checkout-error-banner" class="checkout-error-banner" style="display: none;" role="alert"></div>
+
+    <section class="checkout-layout" id="checkout-layout">
       <form class="checkout-form" id="checkout-form" aria-label="Delivery details" novalidate>
         <label class="field">
-          <span>Full name</span>
-          <input type="text" id="checkout-name" name="fullName" placeholder="Your full name" required />
+          <span>Full name *</span>
+          <input type="text" id="checkout-name" name="fullName" placeholder="e.g. Ramesh Kumar" required />
         </label>
 
         <label class="field">
-          <span>Mobile number</span>
+          <span>Mobile number *</span>
           <input type="tel" id="checkout-phone" name="mobile" placeholder="+91 98765 43210" required />
         </label>
 
         <label class="field">
-          <span>Full shipping address</span>
-          <textarea id="checkout-address" name="address" rows="4" placeholder="House / flat, street, city" required></textarea>
+          <span>Full shipping address *</span>
+          <textarea id="checkout-address" name="address" rows="4" placeholder="House / Flat No., Street name, Landmark, City" required></textarea>
         </label>
 
         <label class="field">
-          <span>State</span>
+          <span>State *</span>
           <input type="text" id="checkout-state" name="state" placeholder="Andhra Pradesh" required />
         </label>
 
         <label class="field">
-          <span>Pincode</span>
+          <span>Pincode *</span>
           <input type="text" id="checkout-pincode" name="pincode" inputmode="numeric" placeholder="533001" required />
         </label>
 
         <div class="whatsapp-note">
-          <span>On placing your order, a pre-filled WhatsApp message will open so you can send your details directly to us. We'll confirm the order and arrange payment on delivery.</span>
+          <span>ℹ️ On successful order saving, a unique Order ID will be generated. You will see a full confirmation summary with a option to send details directly to our WhatsApp support (+91 9542288472).</span>
         </div>
 
-        <button class="btn btn-primary" type="submit">Place order &amp; send on WhatsApp</button>
+        <button class="btn btn-primary" type="submit" id="checkout-submit-btn">Place Order &amp; Confirm</button>
       </form>
 
       <aside class="checkout-summary" aria-label="Order summary">
-        <div class="summary-header">Your order</div>
+        <div class="summary-header">Your order breakdown</div>
         <div class="summary-list" id="checkout-summary-list"></div>
-        <!-- <div class="instagram-promo-card">
-          <h4>🌴 FOLLOW US & SAVE 10% 🎁</h4>
-          <p>Follow <strong>@konaseema.cococraft</strong> on Instagram & DM us <strong>"COCO10"</strong> to get 10% OFF on your order!</p>
-          <a class="btn btn-primary instagram-promo-btn" href="https://www.instagram.com/konaseema.cococraft/" target="_blank" rel="noopener">Follow Us on Instagram</a>
-          <div class="instagram-promo-badge">
-            <span>Coupon code: <strong>COCO10</strong></span>
-            <span>10% OFF | Maximum ₹150</span>
-          </div>
-        </div> -->
 
         <div class="coupon-container">
           <div class="coupon-field">
-            <input type="text" id="coupon-input" placeholder="Enter coupon code" aria-label="Coupon code" />
+            <input type="text" id="coupon-input" placeholder="Enter coupon code (e.g. RUDRANI5)" aria-label="Coupon code" />
             <button type="button" id="apply-coupon-btn" class="btn btn-ghost">Apply</button>
           </div>
           <p id="coupon-message" class="coupon-message" aria-live="polite"></p>
         </div>
+
         <div class="summary-totals" id="checkout-summary-totals"></div>
       </aside>
     </section>
+
+    <!-- Order Confirmation Screen Container -->
+    <div id="order-confirmation-root" class="order-confirmation-root" style="display: none;"></div>
   </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Konaseema CocoCraft</h3>
+        <p>Handcrafted eco-friendly coconut shell art from Andhra Pradesh.</p>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <p>📞 +91 9542288472</p>
+        <p>💬 <a href="https://wa.me/919542288472" target="_blank" rel="noopener">WhatsApp Support</a></p>
+      </div>
+      <div>
+        <h3>Policies</h3>
+        <ul class="footer-policy-links">
+          <li><button type="button" class="policy-link-btn" data-policy="shipping">Shipping Policy</button></li>
+          <li><button type="button" class="policy-link-btn" data-policy="privacy">Privacy Policy</button></li>
+          <li><button type="button" class="policy-link-btn" data-policy="terms">Terms of Service</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Konaseema CocoCraft. All rights reserved.</div>
+  </footer>
+
+  <!-- Policy Modal Container -->
+  <div id="policy-modal-root"></div>
 
   <script src="logic.mjs"></script>
 </body>

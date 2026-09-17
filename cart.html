@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cart | Konaseema CocoCraft</title>
+  <meta name="description" content="Review your shopping cart selection before proceeding to checkout on Konaseema CocoCraft." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +29,10 @@
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
 
     <ul class="nav-links">
-      <li><a href="index.html#products">Shop</a></li>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
     </ul>
 
     <a class="cart-icon" href="cart.html" aria-label="Shopping cart">
@@ -41,7 +45,7 @@
     <div class="cart-hero">
       <span class="eyebrow">YOUR CART</span>
       <h1>Artisan pieces ready for checkout</h1>
-      <p>Review your handcrafted selection and adjust quantities before checkout.</p>
+      <p>Review your handcrafted selection and adjust quantities. Final shipping charges vary by weight &amp; distance (confirmed via WhatsApp).</p>
     </div>
 
     <section class="cart-layout">
@@ -49,6 +53,32 @@
       <aside class="cart-summary" aria-label="Checkout summary"></aside>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Konaseema CocoCraft</h3>
+        <p>Handcrafted eco-friendly coconut shell art from Andhra Pradesh.</p>
+      </div>
+      <div>
+        <h3>Customer Support</h3>
+        <p>📞 <a href="tel:+919542288472">+91 9542288472</a></p>
+        <p>💬 <a href="https://wa.me/919542288472" target="_blank" rel="noopener">WhatsApp Support</a></p>
+      </div>
+      <div>
+        <h3>Policies</h3>
+        <ul class="footer-policy-links">
+          <li><button type="button" class="policy-link-btn" data-policy="shipping">Shipping Policy</button></li>
+          <li><button type="button" class="policy-link-btn" data-policy="privacy">Privacy Policy</button></li>
+          <li><button type="button" class="policy-link-btn" data-policy="terms">Terms of Service</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Konaseema CocoCraft. All rights reserved.</div>
+  </footer>
+
+  <!-- Policy Modal Container -->
+  <div id="policy-modal-root"></div>
 
   <script src="logic.mjs"></script>
 </body>
