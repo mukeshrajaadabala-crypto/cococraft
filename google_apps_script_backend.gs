@@ -16,7 +16,13 @@ const PRODUCT_CATALOG = {
   'CCS001': { name: 'Coconut Shell Rakhi-Packof 1 (CCS001)', price: 99 },
   'CCS002': { name: 'Coconut Shell Rakhi-Packof 1 (CCS002)', price: 99 },
   'KC001': { name: 'Govinda Blessings Keychain-Packof 1 (KC001)', price: 65 },
-  'WR003': { name: 'Wooden Rakhi-Packof 1 (WR003)', price: 99 }
+  'WR003': { name: 'Wooden Rakhi-Packof 1 (WR003)', price: 99 },
+  'CG001': { name: 'Pure Desi Cow Ghee - 500ml (CG001)', price: 800 },
+  'CG002': { name: 'Pure Desi Cow Ghee - 1000ml (CG002)', price: 1600 },
+  'CDP001': { name: 'Cow Dung Pramida / Diyas - Pack of 12 (CDP001)', price: 99 },
+  'CDC001': { name: 'Cow Dung Cakes for Hawan & Pooja - Pack of 10 (CDC001)', price: 149 },
+  'CDV001': { name: 'Cow Dung Vibhuti / Sacred Bhasma - 100g (CDV001)', price: 80 },
+  'CDB001': { name: 'Cow Dung Badkulla Mala for Holi (CDB001)', price: 120 }
 };
 
 // Trusted Coupon Rules

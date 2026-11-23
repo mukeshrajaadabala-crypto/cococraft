@@ -22,7 +22,7 @@ PORT=5000
 All tables and indexes are defined in [`backend/schema.sql`](file:///d:/CocoCraft%20Projects/KCC/cococraft%2011-09-2026/backend/schema.sql):
     
 ### 1. `products`
-Stores the complete eco-friendly handcrafted product catalog.
+Stores the complete handcrafted product catalog.
 - `sno` (INT, GENERATED ALWAYS AS IDENTITY, UNIQUE) — Auto-incrementing serial number
 - `id` (VARCHAR(50), PRIMARY KEY) — e.g. `'WR001'`, `'CCS001'`, `'KC001'`
 - `name` (VARCHAR(255))

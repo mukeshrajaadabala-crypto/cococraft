@@ -14,11 +14,11 @@ const initialProducts = [
     price: 80,
     category: 'Rakhis',
     subcategory: 'Wooden rakhis',
-    tag: 'Eco-Friendly Wooden Rakhi (Packof 1)',
+    tag: 'Wooden Rakhi (Packof 1)',
     image: 'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785352016/Wooden_Rakhis_pack_of_1_je8b6n.png',
     images: ['https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785352016/Wooden_Rakhis_pack_of_1_je8b6n.png'],
     alt: 'Wooden Rakhi-Packof 1 (WR001)',
-    description: 'This single-piece eco-friendly Wooden Rakhi is crafted with high-precision laser carving from natural wood. It features traditional geometric and floral designs, dyed with organic non-toxic colors, and bound with a soft cotton thread. Perfectly biodegradable and skin-safe.'
+    description: 'This single-piece Wooden Rakhi is crafted with high-precision laser carving from natural wood. It features traditional geometric and floral designs, dyed with organic non-toxic colors, and bound with a soft cotton thread. Perfectly biodegradable and skin-safe.'
   },
   {
     id: 'WR002',
@@ -27,11 +27,11 @@ const initialProducts = [
     price: 198,
     category: 'Rakhis',
     subcategory: 'Wooden rakhis',
-    tag: 'Eco-Friendly Wooden Rakhi (Packof 3)',
+    tag: 'Wooden Rakhi (Packof 3)',
     image: 'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785351521/Wooden_Rakhis_Combo_jhlbmz.png',
     images: ['https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785351521/Wooden_Rakhis_Combo_jhlbmz.png'],
     alt: 'Wooden Rakhi-Packof 3 (WR002)',
-    description: 'A beautiful combo set of three unique eco-friendly wooden rakhis. Each piece showcases distinct traditional patterns, meticulously engraved on natural wood. Ideal for families celebrating sustainable bonds.'
+    description: 'A beautiful combo set of three unique wooden rakhis. Each piece showcases distinct traditional patterns, meticulously engraved on natural wood. Ideal for families celebrating sustainable bonds.'
   },
   {
     id: 'CCS001',
@@ -40,11 +40,11 @@ const initialProducts = [
     price: 99,
     category: 'Rakhis',
     subcategory: 'Coconut shell rakhis',
-    tag: 'Eco-Friendly Coconut Shell Rakhi (Packof 1)',
+    tag: 'Coconut Shell Rakhi (Packof 1)',
     image: 'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785931822/CCS001_biiqcs.jpg',
     images: ['https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785931822/CCS001_biiqcs.jpg'],
-    alt: 'Eco-Friendly Coconut Shell Rakhi Packof 1 (CCS001)',
-    description: 'Transformed from a real discarded coconut shell, this handmade eco-friendly rakhi features a polished round shell emblem with hand-carved floral detailing. A perfect combination of traditional art and sustainable design.'
+    alt: 'Coconut Shell Rakhi Packof 1 (CCS001)',
+    description: 'Transformed from a real discarded coconut shell, this handmade rakhi features a polished round shell emblem with hand-carved floral detailing. A perfect combination of traditional art and sustainable design.'
   },
   {
     id: 'CCS002',
@@ -53,10 +53,10 @@ const initialProducts = [
     price: 99,
     category: 'Rakhis',
     subcategory: 'Coconut shell rakhis',
-    tag: 'Eco-Friendly Coconut Shell Rakhi (Packof 1)',
+    tag: 'Coconut Shell Rakhi (Packof 1)',
     image: 'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785931837/CCS002_pytuoa.jpg',
     images: ['https://res.cloudinary.com/dd1d5fhl4/image/upload/v1785931837/CCS002_pytuoa.jpg'],
-    alt: 'Eco-Friendly Coconut Shell Rakhi Packof 1 (CCS002)',
+    alt: 'Coconut Shell Rakhi Packof 1 (CCS002)',
     description: 'Features a unique hand-carved pattern on natural coconut shell. Lightweight, durable, and completely biodegradable, this rakhi is a beautiful testament to Konaseema\'s local craftsmanship.'
   },
   {
@@ -82,7 +82,7 @@ const initialProducts = [
     price: 99,
     category: 'Rakhis',
     subcategory: 'Wooden rakhis',
-    tag: 'Eco-Friendly Hand-Carved Wooden Rakhi',
+    tag: 'Hand-Carved Wooden Rakhi',
     image: 'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106432/CCS007_yugwvc.jpg',
     images: [
       'https://res.cloudinary.com/dd1d5fhl4/image/upload/v1786106432/CCS007_yugwvc.jpg',
@@ -91,6 +91,84 @@ const initialProducts = [
     ],
     alt: 'Wooden Rakhi-Packof 1 (WR003)',
     description: 'A premium hand-crafted Wooden rakhi featuring fine geometric shapes and detailed concentric circle carving. Sustainable, skin-safe, biodegradable, and bound with high-quality organic threads.'
+  },
+  {
+    id: 'CG001',
+    name: 'Pure Desi Cow Ghee - 500ml (CG001)',
+    mrp: 1000,
+    price: 800,
+    category: 'Ghee',
+    subcategory: '',
+    tag: 'Pure Desi Cow Ghee (500ml)',
+    image: 'cow_ghee_jar.jpg',
+    images: ['cow_ghee_jar.jpg'],
+    alt: 'Pure Desi Cow Ghee 500ml (CG001)',
+    description: 'Traditional pure desi cow ghee made from authentic cultured butter (bilona method). Features a rich golden color, aromatic natural fragrance, and delicious granular (danedar) texture. Free from any artificial preservatives or adulterants.'
+  },
+  {
+    id: 'CG002',
+    name: 'Pure Desi Cow Ghee - 1000ml (CG002)',
+    mrp: 2000,
+    price: 1600,
+    category: 'Ghee',
+    subcategory: '',
+    tag: 'Pure Desi Cow Ghee (1000ml / 1 Litre)',
+    image: 'cow_ghee_jar.jpg',
+    images: ['cow_ghee_jar.jpg'],
+    alt: 'Pure Desi Cow Ghee 1000ml (CG002)',
+    description: 'Family-size pack of authentic pure desi cow ghee, prepared in traditional small batches for exceptional taste, aroma, and granular consistency. Wholesome and nourishing for daily culinary and wellness uses.'
+  },
+  {
+    id: 'CDP001',
+    name: 'Cow Dung Pramida / Diyas - Pack of 12 (CDP001)',
+    mrp: 150,
+    price: 99,
+    category: 'Pooja Essentials',
+    subcategory: '',
+    tag: 'Handcrafted Cow Dung Diyas (Pack of 12)',
+    image: 'cow_dung_pramida.jpg',
+    images: ['cow_dung_pramida.jpg'],
+    alt: 'Handcrafted Cow Dung Pramida Diyas Pack of 12 (CDP001)',
+    description: 'Natural handcrafted cow dung pramida (diyas) made traditionally for daily pooja, festive lighting, and sacred rituals. 100% natural, biodegradable, and releases a pure purifying aroma when lit.'
+  },
+  {
+    id: 'CDC001',
+    name: 'Cow Dung Cakes for Hawan & Pooja - Pack of 10 (CDC001)',
+    mrp: 200,
+    price: 149,
+    category: 'Pooja Essentials',
+    subcategory: '',
+    tag: 'Natural Cow Dung Cakes (Pack of 10)',
+    image: 'cow_dung_cakes.jpg',
+    images: ['cow_dung_cakes.jpg'],
+    alt: 'Natural Cow Dung Cakes for Hawan and Pooja Pack of 10 (CDC001)',
+    description: 'Traditional sundried round desi cow dung cakes (uple / hawan kanda) prepared with natural methods. Ideal for agnihotra, hawan pooja, home purification, and cultural ceremonies.'
+  },
+  {
+    id: 'CDV001',
+    name: 'Pure Cow Dung Vibhuti / Sacred Bhasma - 100g (CDV001)',
+    mrp: 120,
+    price: 80,
+    category: 'Pooja Essentials',
+    subcategory: '',
+    tag: 'Pure Sacred Cow Dung Bhasma (100g)',
+    image: 'cow_dung_vibhuti.jpg',
+    images: ['cow_dung_vibhuti.jpg'],
+    alt: 'Pure Cow Dung Vibhuti Sacred Bhasma 100g (CDV001)',
+    description: 'Traditional sacred vibhuti (holy bhasma) prepared from pure desi cow dung through ancient slow-burning rituals. Ultra-fine texture, authentic fragrance, and spiritually purifying for daily tilak.'
+  },
+  {
+    id: 'CDB001',
+    name: 'Cow Dung Badkulla Mala for Holi (CDB001)',
+    mrp: 180,
+    price: 120,
+    category: 'Pooja Essentials',
+    subcategory: '',
+    tag: 'Cow Dung Badkulla Mala for Holika Dahan',
+    image: 'cow_dung_badkulla_mala.jpg',
+    images: ['cow_dung_badkulla_mala.jpg'],
+    alt: 'Traditional Cow Dung Badkulla Mala for Holi (CDB001)',
+    description: 'Traditional garland (mala) of dried cow dung badkullas (gulari) handcrafted and strung on natural jute rope. Specially made for auspicious Holika Dahan rituals, prayers, and cultural festivities.'
   }
 ];
 

@@ -2175,4 +2175,298 @@ button {
     height: 240px;
   }
 }
+
+/* COMPREHENSIVE MOBILE VIEW ENHANCEMENTS */
+@media (max-width: 600px) {
+  :root {
+    --content-padding: 16px;
+  }
+
+  body {
+    padding-top: 56px;
+  }
+
+  /* Compact Touch-Friendly Navbar */
+  .site-nav {
+    height: 56px;
+    padding: 6px 14px;
+    gap: 12px;
+  }
+
+  .brand img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-title {
+    font-size: 18px;
+  }
+
+  .brand-sub {
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-top: 2px;
+  }
+
+  .cart-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .nav-toggle {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+
+  .nav-links {
+    right: 14px;
+    left: 14px;
+    width: auto;
+  }
+
+  /* Evergreen Hero on Mobile */
+  .evergreen-hero {
+    padding: 20px 14px 24px;
+  }
+
+  .hero-text-card h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .hero-text-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .hero-main-img {
+    height: 220px;
+    border-radius: 18px;
+  }
+
+  .hero-badge {
+    bottom: -10px;
+    left: 12px;
+    padding: 8px 14px;
+    border-radius: 12px;
+  }
+
+  .hero-badge-title {
+    font-size: 12px;
+  }
+
+  .hero-badge-sub {
+    font-size: 10px;
+  }
+
+  /* Trust Strip on Mobile */
+  .trust-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 16px 14px;
+  }
+
+  .trust-item:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .trust-item {
+    gap: 10px;
+  }
+
+  .trust-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .trust-item h4 {
+    font-size: 13px;
+  }
+
+  .trust-item p {
+    font-size: 11px;
+  }
+
+  /* Category Filter Pills on Mobile */
+  .category-filters-container {
+    margin: 14px 0 18px;
+    gap: 8px;
+  }
+
+  .category-tabs,
+  .subcategory-tabs {
+    gap: 6px;
+  }
+
+  .category-tab {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .subcategory-tab {
+    padding: 5px 12px;
+    font-size: 11px;
+  }
+
+  /* Products Grid on Mobile */
+  .products {
+    padding: 0 14px 24px;
+  }
+
+  .products-grid {
+    gap: 10px;
+  }
+
+  .products-grid .product-image {
+    height: 130px;
+  }
+
+  .products-grid .product-body {
+    padding: 10px 8px;
+  }
+
+  .products-grid .product-body h3 {
+    font-size: 12px;
+    min-height: 32px;
+  }
+
+  .products-grid .product-price {
+    font-size: 14px;
+  }
+
+  .products-grid .product-mrp {
+    font-size: 11px;
+  }
+
+  .products-grid .product-btn {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  /* Checkout Layout: Summary First on Mobile */
+  .checkout-page .checkout-main {
+    padding: 20px 14px 40px;
+  }
+
+  .checkout-hero h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .checkout-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .checkout-summary {
+    order: 1;
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  .checkout-form {
+    order: 2;
+    padding: 18px 16px;
+    border-radius: 18px;
+    gap: 14px;
+  }
+
+  .field input,
+  .field textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  /* Cart Layout on Mobile */
+  .cart-page-main {
+    padding: 20px 14px 40px;
+  }
+
+  .cart-hero h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .cart-item {
+    padding: 14px;
+  }
+
+  .cart-item-media {
+    height: 140px;
+  }
+
+  .cart-summary {
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  /* Order Confirmation on Mobile */
+  .order-confirmation-root {
+    margin: 16px auto;
+    padding: 0 12px;
+  }
+
+  .confirmation-card {
+    padding: 24px 16px;
+    border-radius: 18px;
+  }
+
+  .confirmation-card h2 {
+    font-size: 24px;
+  }
+
+  .confirmation-section {
+    padding: 14px;
+  }
+
+  .btn-whatsapp-large {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  /* Compact Floating FABs */
+  .whatsapp-fab {
+    bottom: 16px;
+    left: 14px;
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .insta-fab {
+    bottom: 16px;
+    right: 14px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .insta-fab img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .facebook-fab {
+    bottom: 68px;
+    right: 14px;
+    width: 46px;
+    height: 46px;
+  }
+}
+
 
