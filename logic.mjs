@@ -18,13 +18,20 @@ const ENABLE_SEASONAL_PROMO = true; // Controls Raksha Bandhan banner visibility
 const SHIPPING_FEE = 100; // Standard Flat Shipping Fee across India
 const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwhSPSEFz44FcxDVNsLqgHeKqR6BQyfBJE9lty_dqJc_4sjOPJvhcJ1jYk-_6mp8sSJ3g/exec';
 
+// Backend API Configuration (Neon Database Backend)
+const NEON_BACKEND_API_URL = window.COCOCRAFT_API_URL || (
+  window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://localhost:5000/api'
+    : '/api'
+);
+
 // Local Mock API Mode (automatically active in local/preview environments or when server unavailable)
 const isLocalEnv = window.location.hostname === 'localhost' ||
   window.location.hostname === '127.0.0.1' ||
   window.location.protocol === 'file:' ||
   window.location.hostname.endsWith('.local');
 
-let USE_MOCK_API = isLocalEnv; // Set to false when testing against live Google Apps Script endpoint
+let USE_MOCK_API = false; // Set to true to force offline mock, or false to use Neon API / Google Apps Script
 
 // In-Memory Mock Store for Idempotency
 const mockOrderDatabase = new Map();
@@ -135,12 +142,12 @@ const VALID_COUPONS = {
   //   maxDiscount: 150,
   //   description: '5% discount on product subtotal strictly above ₹100 (Max discount ₹150).'
   // },
-  'RUDRANI5': {
-    minSubtotal: 200,
-    discount: 0.05,
-    maxDiscount: Infinity,
-    description: '5% discount on product subtotal above ₹200.'
-  },
+  // 'RUDRANI5': {
+  //   minSubtotal: 200,
+  //   discount: 0.05,
+  //   maxDiscount: Infinity,
+  //   description: '5% discount on product subtotal above ₹200.'
+  // },
   'RUDRANI10': {
     minSubtotal: 1000,
     discount: 0.10,
@@ -1005,19 +1012,51 @@ const submitOrderToServer = async (payload) => {
     return response;
   }
 
-  // Live Server Call
-  const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'text/plain' },
-    body: JSON.stringify(payload)
-  });
+  // 1. Try Neon Database Backend API
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 6000);
+    const neonResponse = await fetch(`${NEON_BACKEND_API_URL}/orders`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      signal: controller.signal
+    });
+    clearTimeout(timeoutId);
 
-  if (!response.ok) {
-    throw new Error(`Server returned HTTP ${response.status}`);
+    if (neonResponse.ok) {
+      const neonData = await neonResponse.json();
+      if (neonData && (neonData.status === 'success' || neonData.success)) {
+        return neonData;
+      }
+    }
+  } catch (neonErr) {
+    console.warn('Neon Backend API unreachable or failed, falling back to Google Apps Script / Mock:', neonErr.message);
   }
 
-  const data = await response.json();
-  return data;
+  // 2. Fallback to Google Apps Script Endpoint
+  try {
+    const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(payload)
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      // Ensure data has orderId if legacy script returned only { status: "success" }
+      if (data && (data.status === 'success' || data.success) && !data.orderId && !(data.data && data.data.orderId)) {
+        const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+        const fallbackOrderId = `KCC-${dateStr}-${mockOrderSeq++}`;
+        data.orderId = fallbackOrderId;
+      }
+      return data;
+    }
+  } catch (gasErr) {
+    console.warn('Google Apps Script failed:', gasErr.message);
+  }
+
+  throw new Error('Unable to connect to order processing server. Please check your connection and try again.');
 };
 
 // Checkout Form Submission Handler

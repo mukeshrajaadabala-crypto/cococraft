@@ -22,7 +22,7 @@ const PRODUCT_CATALOG = {
 // Trusted Coupon Rules
 const COUPON_RULES = {
   // 'RAKHI5': { minSubtotal: 100, discountPercent: 0.05, maxDiscount: 150 },
-  'RUDRANI5': { minSubtotal: 200, discountPercent: 0.05, maxDiscount: Infinity },
+  // 'RUDRANI5': { minSubtotal: 200, discountPercent: 0.05, maxDiscount: Infinity },
   'RUDRANI10': { minSubtotal: 1000, discountPercent: 0.10, maxDiscount: Infinity }
 };
 
@@ -110,15 +110,28 @@ function doPost(e) {
 
     const totalAmount = subtotal - discountAmount + SHIPPING_FEE;
 
-    // Generate Unique Server Order ID
+    // Save to Google Sheet & Generate Sequential Order ID (KCC-YYYYMMDD-1001, 1002, 1003...)
+    const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
     const today = new Date();
     const dateStr = Utilities.formatDate(today, "Asia/Kolkata", "yyyyMMdd");
-    const randomSuffix = Math.floor(1000 + Math.random() * 9000);
-    const orderId = `KCC-${dateStr}-${randomSuffix}`;
-    const timestamp = Utilities.formatDate(today, "Asia/Kolkata", "yyyy-MM-dd HH:mm:ss");
+    const datePrefix = `KCC-${dateStr}-`;
+    const lastRow = sheet.getLastRow();
 
-    // Save to Google Sheet
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    let maxTodaySeq = 1000;
+    if (lastRow > 1) {
+      const idValues = sheet.getRange(2, 1, lastRow - 1, 1).getValues();
+      for (let r = 0; r < idValues.length; r++) {
+        const rowId = String(idValues[r][0] || '');
+        if (rowId.startsWith(datePrefix)) {
+          const num = parseInt(rowId.replace(datePrefix, ''), 10);
+          if (!isNaN(num) && num > maxTodaySeq) {
+            maxTodaySeq = num;
+          }
+        }
+      }
+    }
+    const orderId = `${datePrefix}${maxTodaySeq + 1}`;
+    const timestamp = Utilities.formatDate(today, "Asia/Kolkata", "yyyy-MM-dd HH:mm:ss");
     const productSummary = validatedItems.map(it => `${it.name} x ${it.qty}`).join(', ');
     const totalQuantity = validatedItems.reduce((sum, it) => sum + it.qty, 0);
 
